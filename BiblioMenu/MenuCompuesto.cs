@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MenuesConsola
 {
-    class MenuCompuesto: MenuComponente
+    public class MenuCompuesto: MenuComponente
     {
         private List<MenuComponente> Menues { get; set; }
         public MenuCompuesto()
