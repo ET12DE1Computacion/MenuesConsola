@@ -5,6 +5,14 @@ namespace MenuesConsola
     public abstract class MenuComponente
     {
         public string Nombre { get; set; }
+
+        public MenuComponente(){}
+
+        public MenuComponente(string nombre)
+        {
+            Nombre = nombre;
+        }
+
         public virtual void mostrar()
         {
             Console.Clear();
