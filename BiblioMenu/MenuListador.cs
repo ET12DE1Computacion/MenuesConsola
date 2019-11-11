@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 namespace MenuesConsola
 {
+    /// <summary>
+    /// Menu encargado de mostrar una colección
+    /// </summary>
+    /// <typeparam name="T">Tipo de la Coleccion</typeparam>
     public abstract class  MenuListador<T>: MenuComponente
     {
         public override void mostrar()
@@ -29,8 +33,23 @@ namespace MenuesConsola
                 lista.ForEach(e => imprimirElemento(e));
             }
         }
+
+        /// <summary>
+        /// Método que se encarga de mostrar por pantalla un elemento del tipo T
+        /// </summary>
+        /// <param name="elemento">Parametro generico que se imprimirá</param>
         public abstract void imprimirElemento(T elemento);
+
+        /// <summary>
+        /// Método encargado de devolver el listado de lo que se quiere mostrar
+        /// </summary>
+        /// <returns>Colección de objetos a mostrar</returns>
         public abstract List<T> obtenerLista();
+
+        /// <summary>
+        /// Metodo encargado de mostrar el listado y de seleccionar un elemento
+        /// </summary>
+        /// <returns>Elemento seleccionado del tipo de la lista</returns>
         public T seleccionarElemento()
         {
             var lista = obtenerLista();

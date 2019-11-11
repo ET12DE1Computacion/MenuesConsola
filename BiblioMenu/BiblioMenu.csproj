@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Version>1.0.2</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>D:\Proyectos\MenuesConsola\BiblioMenu\BiblioMenu.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>
