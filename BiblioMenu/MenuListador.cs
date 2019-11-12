@@ -9,6 +9,9 @@ namespace MenuesConsola
     /// <typeparam name="T">Tipo de la Coleccion</typeparam>
     public abstract class  MenuListador<T>: MenuComponente
     {
+        /// <summary>
+        /// Método encargado de mostrar por pantalla el listado de objetos T
+        /// </summary>
         public override void mostrar()
         {
             base.mostrar();

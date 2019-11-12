@@ -19,6 +19,12 @@ namespace MenuesConsola
         }
 
         /// <summary>
+        /// Constructor con nombre
+        /// </summary>
+        /// <param name="nombre"></param>
+        public MenuCompuesto(string nombre) : base(nombre) { }
+
+        /// <summary>
         /// Constructor que inicializa su listado con un MenuComponente
         /// </summary>
         /// <param name="menu">Elemento que se agregara a la lista de menues</param>

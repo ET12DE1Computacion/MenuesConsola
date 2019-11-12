@@ -47,6 +47,30 @@ namespace MenuesConsola
         }
 
         /// <summary>
+        /// Método que muestra una pregunta cerrada y espera una respuesta
+        /// </summary>
+        /// <param name="cadena">Pregunta cerrada</param>
+        /// <returns>Valor de verdad de la respuesta</returns>
+        public bool preguntaCerrada(string cadena)
+        {
+            string opc;
+            bool salida;
+
+            do
+            {
+                Console.Write($"{cadena} S/N: ");
+                opc = Console.ReadLine().ToUpper();
+                salida = opc.CompareTo("S") == 0 || opc.CompareTo("N") == 0;
+                if (!salida)
+                {
+                    Console.WriteLine("Por favor seleccione una opción valida: S o N");
+                }
+            } while (!salida);
+
+            return opc.CompareTo("S") == 0;
+        }
+
+        /// <summary>
         /// Método que lee un valor numerico por debajo de la cantidad de opciones
         /// </summary>
         /// <param name="cantOpciones">Cantidad maxima de opciones a elegir</param>
