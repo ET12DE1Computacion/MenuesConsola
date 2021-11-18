@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MenuesConsola
+namespace et12.edu.ar.MenuesConsola
 {
     /// <summary>
     /// Menu encargado de mostrar y seleccionar otros menues

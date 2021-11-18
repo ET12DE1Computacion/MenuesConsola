@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MenuesConsola
+namespace et12.edu.ar.MenuesConsola
 {
     /// <summary>
     /// Clase abstracta con la funcionalidad minima para los menues
@@ -30,6 +30,14 @@ namespace MenuesConsola
         /// Método base que se usa para mostrar el contenido del menu
         /// </summary>
         public virtual void mostrar()
+        {
+            limpiarConNombre();
+        }
+
+        /// <summary>
+        /// Método que se encarga de limpiar la pantalla e imprime el nombre del menu
+        /// </summary>
+        public void limpiarConNombre()
         {
             Console.Clear();
             Console.WriteLine(Nombre);

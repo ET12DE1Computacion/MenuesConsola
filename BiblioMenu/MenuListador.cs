@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MenuesConsola
+namespace et12.edu.ar.MenuesConsola
 {
     /// <summary>
     /// Menu encargado de mostrar una colección
@@ -20,7 +20,12 @@ namespace MenuesConsola
             Console.WriteLine("Presione una tecla para continuar ...");
             Console.ReadKey();
         }
-        private void mostrarListado(bool conIndice = false)
+
+        /// <summary>
+        /// Método que se encarga de mostrar por pantalla el listado de elementos
+        /// </summary>
+        /// <param name="conIndice">bool que indica si se desea mostrar con elementos con indice en base 0 o no</param>
+        public void mostrarListado(bool conIndice = false)
         {
             var lista = obtenerLista();
             if (conIndice)
@@ -53,12 +58,23 @@ namespace MenuesConsola
         /// Metodo encargado de mostrar el listado y de seleccionar un elemento
         /// </summary>
         /// <returns>Elemento seleccionado del tipo de la lista</returns>
-        public T seleccionarElemento()
+        public T seleccionarElemento(bool valorObligatorio = true)
         {
+            T seleccion = default(T);
             var lista = obtenerLista();
             mostrarListado(conIndice: true);
-            var indiceSeleccion = leerOpcion((byte)lista.Count);
-            return lista[indiceSeleccion];
+            byte indiceSeleccion;
+            if (valorObligatorio)
+            {
+                indiceSeleccion = leerOpcion((byte)lista.Count);
+                seleccion = lista[indiceSeleccion];
+            }
+            else
+            {
+                indiceSeleccion = leerOpcion((byte)(lista.Count+1));
+
+            }            
+            return seleccion;
         }
     }
 }

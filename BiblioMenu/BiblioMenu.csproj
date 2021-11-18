@@ -1,12 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
-    <Version>1.0.3</Version>
+    <TargetFramework>net5.0</TargetFramework>
+    <Version>1.1</Version>
+    <PackageProjectUrl>https://github.com/ET12DE1Computacion/MenuesConsola</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ET12DE1Computacion/MenuesConsola</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Authors>Luis Duran</Authors>
+    <Description>Proyecto para facilitar la creación de menues de consola</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>D:\Proyectos\MenuesConsola\BiblioMenu\BiblioMenu.xml</DocumentationFile>
+    <DocumentationFile>bin\BiblioMenu.xml</DocumentationFile>
+    <OutputPath>bin\</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
