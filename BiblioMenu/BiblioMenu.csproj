@@ -8,6 +8,12 @@
     <RepositoryType>git</RepositoryType>
     <Authors>Luis Duran</Authors>
     <Description>Proyecto para facilitar la creación de menues de consola</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>Logo.png</PackageIcon>
+    <PackageIconUrl />
+    <PackageTags>et12 san martin tecnica menu menues consola et12.edu.ar</PackageTags>
+    <Company>et12.edu.ar</Company>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -18,5 +24,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>C:\Proyectos\MenuesConsola\BiblioMenu\BiblioMenu.xml</DocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\doc\Logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
