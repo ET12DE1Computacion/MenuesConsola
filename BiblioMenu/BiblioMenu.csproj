@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <Version>1.1</Version>
+    <Version>1.1.1</Version>
     <PackageProjectUrl>https://github.com/ET12DE1Computacion/MenuesConsola</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ET12DE1Computacion/MenuesConsola</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -14,6 +14,8 @@
     <PackageTags>et12 san martin tecnica menu menues consola et12.edu.ar</PackageTags>
     <Company>et12.edu.ar</Company>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <AssemblyVersion>1.1.1.0</AssemblyVersion>
+    <FileVersion>1.1.1.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

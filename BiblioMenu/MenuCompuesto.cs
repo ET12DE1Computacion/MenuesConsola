@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace et12.edu.ar.MenuesConsola
 {
@@ -19,10 +20,13 @@ namespace et12.edu.ar.MenuesConsola
         }
 
         /// <summary>
-        /// Constructor con nombre
+        /// Constructor con nombre. Inicializa la lista de menues
         /// </summary>
         /// <param name="nombre"></param>
-        public MenuCompuesto(string nombre) : base(nombre) { }
+        public MenuCompuesto(string nombre) : base(nombre)
+        {
+            Menues = new List<MenuComponente>();
+        }
 
         /// <summary>
         /// Constructor que inicializa su listado con un MenuComponente
@@ -40,6 +44,17 @@ namespace et12.edu.ar.MenuesConsola
         public MenuCompuesto(List<MenuComponente> menues)
         {
             Menues = menues;
+        }
+
+        /// <summary>
+        /// Constructor que inicializa el nombre y los menues
+        /// </summary>
+        /// <param name="nombre">Nombre del menu</param>
+        /// <param name="menues">Conjunto de menues</param>
+        public MenuCompuesto(string nombre, params MenuComponente[] menues)
+        {
+            Nombre = nombre;
+            Menues = menues.ToList();
         }
 
         /// <summary>

@@ -72,7 +72,6 @@ namespace et12.edu.ar.MenuesConsola
             else
             {
                 indiceSeleccion = leerOpcion((byte)(lista.Count+1));
-
             }            
             return seleccion;
         }
